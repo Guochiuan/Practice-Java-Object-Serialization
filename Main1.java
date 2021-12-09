@@ -24,8 +24,11 @@ public final class Main1 {
                         ZoneId.of("America/Los_Angeles"),
                         "555 Meowmers Ln, Riverside, CA 92501");
 
+        System.out.println(client.toString());
+
         Path outputPath = Path.of(args[0]);
         try (ObjectOutputStream out = new ObjectOutputStream(Files.newOutputStream(outputPath))) {
+
             out.writeObject(client);
         }
         System.out.println("Wrote to " + outputPath.toAbsolutePath().toString());

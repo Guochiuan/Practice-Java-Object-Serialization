@@ -1,8 +1,9 @@
+import java.io.Serializable;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.ZoneId;
 
-public final class UdacisearchClient {
+public final class UdacisearchClient implements Serializable {
   private String name = "";
   private long id = 0;
   private int quarterlyBudget = 0;
